@@ -13,5 +13,12 @@ before(done){
                 console.log("Your Error", error);
         });
 },
+
+beforeEach(done){
+        mongoose.connection.collections.student.drop(()=>{
+        done();
+        });
+
+},
 };
 
